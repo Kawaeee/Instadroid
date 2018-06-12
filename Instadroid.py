@@ -11,16 +11,16 @@ import os
 usr = "" # username
 pwd = ""    # password
 API = InstagramAPI(usr,pwd)
-API.login()
+API.login() # login
 
 #caption
 caption = ""
 
 def random_picture(): # we require you to rename your picture as number :3
-     pic = randint(1,10) # random number ? - ?
+     pic = randint(1,3) # random number 1 - 3
      auto_post(pic)
      
-def auto_post(pic): # real brute force
+def auto_post(pic):
     picname = str(pic)+".jpg" # picture name
     strcon = r'\picture' # concat picture directory
     def_path = os.getcwd()+strcon # get current directory
